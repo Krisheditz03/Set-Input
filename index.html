@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Set the value of an input field.
+	</title>
+</head>
+
+<body style="text-align:center; background: linear-gradient(to left,#FF512F,#1A2980,#26D0CE); height: 100vh;" id="body">
+	<h1 style="color:green;">
+		Set Input Value
+	</h1>
+    <label for="id1">Name</label>
+	<input type='text' id='id1' />
+
+    <label for="id2">Message</label>
+	<input type='text' id='id2' />
+	<br>
+	<br>
+	<button style="border: 2px solid red; border-radius: 5px; background-color: yellow;" onclick="gfg_Run()">
+		click to set
+	</button>
+	<p id="GFG_DOWN">
+	</p>
+	<p id="GFG_UP">
+	</p>
+	<script>
+		let el_down = document.getElementById("GFG_DOWN");
+		let el_up = document.getElementById("GFG_UP");
+		let inputF = document.getElementById("id1");
+		let inputG = document.getElementById("id2");
+
+		function gfg_Run() {
+			inputF.setAttribute('value', 'defaultValue');
+			el_down.innerHTML =
+				"Name = " + "'" + inputF.value + "'";
+		
+			inputG.setAttribute('value', 'defaultValue');
+			el_up.innerHTML =
+				"Message = " + "'" + inputG.value + "'";
+		
+		}
+	</script>
+</body>
+
+</html>
